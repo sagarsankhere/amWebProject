@@ -31,7 +31,6 @@ export class DashboardPageComponent {
           ele.count = ele.count + 1;
         }
       });
-      console.log(this.RAW_MATERIAL);
     }
   }
   RawMaterialSub(event: any) {
@@ -42,7 +41,6 @@ export class DashboardPageComponent {
           ele.count = ele.count - 1;
         }
       });
-      console.log(this.RAW_MATERIAL);
     }
   }
   FinishProductSub(event: any) {
@@ -67,7 +65,6 @@ export class DashboardPageComponent {
               ele.count = ele.count - 1;
             }
           });
-          console.log(this.RAW_MATERIAL);
         }
       } 
       if (event === 'FP-1') {
@@ -81,7 +78,6 @@ export class DashboardPageComponent {
             ele.count = ele.count + 5;
             fp1add=true;
           }
-          console.log(this.RAW_MATERIAL);
         });
         if (fp1add) {
           this.FINISH_PRODUCT.forEach((ele) => {
@@ -89,7 +85,6 @@ export class DashboardPageComponent {
               ele.count = ele.count - 1;
             }
           });
-          console.log(this.RAW_MATERIAL);
         }
       }
     }
