@@ -1,0 +1,49 @@
+<div fxLayout="column" fxLayoutAlign="space-between center" fxFlex="100">
+  <mat-card>
+    <h1>Raw Material</h1>
+    <table mat-table [dataSource]="RAW_MATERIAL" class="mat-elevation-z8">
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef> Raw Material </th>
+        <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+      </ng-container>
+      <ng-container matColumnDef="count">
+        <th mat-header-cell *matHeaderCellDef> count </th>
+        <td mat-cell *matCellDef="let element"> {{element.count}} </td>
+      </ng-container>
+      <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef></th>
+        <td mat-cell *matCellDef="let element"> 
+          <button mat-button (click)=RawMaterialSub(element.name)><span class="e-icons e-medium e-intermediate-state"></span></button>
+          <button mat-button (click)=RawMaterialAdd(element.name)><mat-icon><span class="e-icons e-medium e-plus"></span></mat-icon></button></td>
+      </ng-container>
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </mat-card>
+
+<mat-card>
+  <h1>Finish Product</h1>
+  <table mat-table [dataSource]="FINISH_PRODUCT" class="mat-elevation-z8">
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef> Raw Material </th>
+      <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+    </ng-container>
+    <ng-container matColumnDef="count">
+      <th mat-header-cell *matHeaderCellDef> count </th>
+      <td mat-cell *matCellDef="let element"> {{element.count}} </td>
+    </ng-container>
+    <ng-container matColumnDef="actions">
+      <th mat-header-cell *matHeaderCellDef></th>
+      <td mat-cell *matCellDef="let element">
+        <button mat-button (click)=FinishProductSub(element.name)><span class="e-icons e-medium e-intermediate-state"></span></button>
+        <button mat-button (click)=FinishProductAdd(element.name)><mat-icon><span class="e-icons e-medium e-plus"></span></mat-icon></button></td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</mat-card>
+
+
+</div>
+
+
